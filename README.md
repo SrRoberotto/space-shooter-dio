@@ -8,12 +8,10 @@ Esse é um projeto guiado de Javascript, na qual vamos fazer um joguinho de spac
 * [CSS básico](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 * [Javascript básico](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
  
-
-
 ## 🚀 Let's code! 🚀
 
 ## Melhorias implementadas
--[x]Funcionamento correto do posicionamento da nave e dos inimigos
--[x]Limite da tela de atuação da nave
--[x]Pontuação
--[x]Maior pontuação
+- [x] Funcionamento correto do posicionamento da nave e dos inimigos
+- [x] Limite da tela de atuação da nave
+- [x] Pontuação
+- [x] Maior pontuação
