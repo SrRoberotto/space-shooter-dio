@@ -63,3 +63,18 @@ body {
     position: relative;
     opacity: 0;
 }
+
+#score {
+    position:relative;
+    display: inline-block;
+    height: 18px;
+    width: 80px;
+    border: 2px solid rgb(32, 81, 128);
+    text-align: right;
+    padding-right: 6px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    right: 100px;
+    top: -280px;
+}

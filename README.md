@@ -1,6 +1,6 @@
-# Oi, tudo bem? Chegou aqui através do curso, certo? 🙃
+# Demonstração de jogo tipo space shooter feito com Java Script 🙃
 
-Esse é o repositório da nossa aula de Javascript, na qual vamos fazer um joguinho de space shooter super legal! 
+Esse é um projeto guiado de Javascript, na qual vamos fazer um joguinho de space shooter super legal! 
 
 ### Os requisitos são:
 
@@ -11,3 +11,9 @@ Esse é o repositório da nossa aula de Javascript, na qual vamos fazer um jogui
 
 
 ## 🚀 Let's code! 🚀
+
+## Melhorias implementadas
+-[x]Funcionamento correto do posicionamento da nave e dos inimigos
+-[x]Limite da tela de atuação da nave
+-[x]Pontuação
+-[x]Maior pontuação

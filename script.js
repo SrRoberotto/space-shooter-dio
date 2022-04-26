@@ -1,9 +1,11 @@
 const yourShip = document.querySelector('.player-shooter');
 const playArea = document.querySelector('#main-play-area');
+const score = document.querySelector('#score');
 const aliensImg = ['img/monster-1.png', 'img/monster-2.png', 'img/monster-3.png'];
 const instructionsText = document.querySelector('.game-instructions');
 const startButton = document.querySelector('.start-button');
 let alienInterval;
+let pontuacao = 0;
 
 //movimento e tiro da nave
 function flyShip(event) {
@@ -21,24 +23,21 @@ function flyShip(event) {
 
 //função de subir
 function moveUp() {
-    let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
-    if(topPosition === "0px") {
-        return
-    } else {
-        let position = parseInt(topPosition);
-        position -= 50;
+    let position = parseInt(getComputedStyle(yourShip).getPropertyValue('top'));
+    if(position >= 30) {
+        // let position = parseInt(topPosition);
+        position -= 30;
         yourShip.style.top = `${position}px`;
     }
 }
 
 //função de descer
 function moveDown() {
-    let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
-    if(topPosition === "510px"){
-        return
-    } else {
-        let position = parseInt(topPosition);
-        position += 50;
+    let position = parseInt(getComputedStyle(yourShip).getPropertyValue('top'));
+    // console.log(topPosition);
+    if(position <= 510){
+        // let position = parseInt(topPosition);
+        position += 30;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -68,6 +67,8 @@ function moveLaser(laser) {
 
         aliens.forEach((alien) => { //comparando se cada alien foi atingido, se sim, troca o src da imagem
             if(checkLaserCollision(laser, alien)) {
+                atualizaPontuacao(pontuacao + 20);
+                // console.log ("Pontuação: " + pontuacao);
                 alien.src = 'img/explosion.png';
                 alien.classList.remove('alien');
                 alien.classList.add('dead-alien');
@@ -133,9 +134,10 @@ function checkLaserCollision(laser, alien) {
 //inicio do jogo
 startButton.addEventListener('click', (event) => {
     playGame();
-})
+});
 
 function playGame() {
+    atualizaPontuacao(0);
     startButton.style.display = 'none';
     instructionsText.style.display = 'none';
     window.addEventListener('keydown', flyShip);
@@ -158,4 +160,10 @@ function gameOver() {
         startButton.style.display = "block";
         instructionsText.style.display = "block";
     });
+}
+
+
+function atualizaPontuacao(pontos=0){
+    pontuacao=pontos;
+    score.innerHTML = pontuacao;
 }
