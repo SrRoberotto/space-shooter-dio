@@ -14,4 +14,4 @@ Esse é um projeto guiado de Javascript, na qual vamos fazer um joguinho de spac
 - [x] Funcionamento correto do posicionamento da nave e dos inimigos
 - [x] Limite da tela de atuação da nave
 - [x] Pontuação
-- [x] Maior pontuação
+- [ ] Maior pontuação
